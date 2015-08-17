@@ -1,0 +1,62 @@
+/* scrivito_quote_widget
+=================================================================== */
+.scrivito-quote-widget {
+  ul {
+    list-style: none outside;
+  }
+  .quote-container {
+    position: relative;
+    *zoom: 1;
+    &:before {
+      display: table;
+      content: "";
+      line-height: 0;
+    }
+    &:after {
+      display: table;
+      content: "";
+      line-height: 0;
+      clear: both;
+    }
+  }
+
+  .carousel-inner {
+    .item {
+      height:auto;
+    }
+  }
+
+  .carousel-control.right {
+    display: none;
+  }
+
+
+  .quotes {
+    background: #eee;
+    border: 1px solid #eee;
+    padding: 20px;
+    line-height: 21px;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(180, 180, 180, 0.1);
+    box-shadow: 0px 1px 1px 0px rgba(180, 180, 180, 0.1);
+  }
+
+  .quotes-bg {
+    background: url(/assets/quote-widget-bubble.png) no-repeat;
+    margin-top: -1px;
+    display: block;
+    width: 200px;
+    height: 30px;
+  }
+
+  .quotes-author {
+    color: #666;
+    float: left;
+    display: block;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    span {
+      display: block;
+      color: #a0a0a0;
+    }
+  }
+}

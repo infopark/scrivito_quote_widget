@@ -1,0 +1,16 @@
+<li class="quote">
+  <div class="quotes">
+    <%= (quote.text || "").html_safe %>
+  </div>
+  <div class="quotes-bg">
+    <div class="quotes-author">
+      <%= quote.author %>
+      <% unless quote.position.blank? %>
+        ,
+        <span>
+          <%= quote.position %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+</li>

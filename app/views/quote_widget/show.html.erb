@@ -1,0 +1,24 @@
+<div class="scrivito-quote-widget">
+  <div class="carousel slide" id="carousel-<%= widget.id %>" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <% (0..widget.quotes.size-1).each do |index| %>
+        <li class="<%= index == 0 ? 'active' : nil %>" data-target="#carousel-<%= widget.id %>" data-slide-to="<%= index %>"></li>
+      <% end %>
+    </ol>
+    <div class="carousel-inner carousel-inner-editors" role="listbox">
+      <% widget.quotes.each_with_index do |panel,index| %>
+        <div class="item <%= index == 0 ? 'active' : nil %>">
+          <ul class="carousel">
+            <%= render template: "quote/show", locals: {quote: panel} %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <a class="left carousel-control" data-slide="prev" href="#carousel-<%= widget.id %>" role="button">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" data-slide="next" href="#carousel-<%= widget.id %>" role="button">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+</div>
