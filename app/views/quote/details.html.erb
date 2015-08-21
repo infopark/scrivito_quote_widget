@@ -1,10 +1,14 @@
 <div class="details-view">
-  <h4>Title</h4>
-  <%= scrivito_tag :div, @obj, :title %>
-  <h4>Quote</h4>
-  <%= scrivito_tag :div, @obj, :text %>
-  <h4>Author</h4>
-  <%= scrivito_tag :div, @obj, :author %>
-  <h4>Position</h4>
-  <%= scrivito_tag :div, @obj, :position %>
+  <%= scrivito_details_for 'Title' do %>
+    <%= scrivito_tag :div, @obj, :title %>
+  <% end %>
+  <%= scrivito_details_for 'Quote' do %>
+    <%= scrivito_tag :div, @obj, :text %>
+  <% end %>
+  <%= scrivito_details_for 'Author' do %>
+    <%= scrivito_tag :div, @obj, :author %>
+  <% end %>
+  <%= scrivito_details_for 'Position or Jobtitle' do %>
+    <%= scrivito_tag :div, @obj, :position %>
+  <% end %>
 </div>
