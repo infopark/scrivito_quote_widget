@@ -1,4 +1,5 @@
 <div class="details-view">
-  <h4>Quotes</h4>
-  <%= scrivito_tag :span, widget, :quotes %>
+  <%= scrivito_details_for 'Quotes' do %>
+    <%= scrivito_tag :div, widget, :quotes %>
+  <% end %>
 </div>
