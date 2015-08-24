@@ -14,11 +14,13 @@
         </div>
       <% end %>
     </div>
-    <a class="left carousel-control" data-slide="prev" href="#carousel-<%= widget.id %>" role="button">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" data-slide="next" href="#carousel-<%= widget.id %>" role="button">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
+    <div class="carousel-control-wrapper">
+      <a class="carousel-control left" data-slide="prev" href="#carousel-<%= widget.id %>" role="button">
+        <span class="fa fa-chevron-left"></span>
+      </a>
+      <a class="carousel-control right" data-slide="next" href="#carousel-<%= widget.id %>" role="button">
+        <span class="fa fa-chevron-right"></span>
+      </a>
+    </div>
   </div>
 </div>

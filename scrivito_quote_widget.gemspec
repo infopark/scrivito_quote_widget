@@ -23,5 +23,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'bundler'
   s.add_dependency 'scrivito'
   s.add_dependency 'scrivito_advanced_editors'
+  s.add_dependency 'font-awesome-rails', '~> 4.4.0.0'
 
 end

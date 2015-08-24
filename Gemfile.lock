@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    scrivito_quote_widget (0.0.6)
+    scrivito_quote_widget (0.0.10)
       bundler
+      font-awesome-rails (~> 4.4.0.0)
       scrivito
       scrivito_advanced_editors
 
@@ -165,4 +166,4 @@ DEPENDENCIES
   scrivito_quote_widget!
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

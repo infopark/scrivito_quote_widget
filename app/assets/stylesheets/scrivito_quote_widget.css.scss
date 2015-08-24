@@ -19,22 +19,23 @@
       clear: both;
     }
   }
-
+  .carousel-control-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 40px;
+  }
   .carousel-inner {
     .item {
       height:auto;
     }
   }
   .carousel-control {
-  width:7%;
-  opacity:0; /* @include transition(all .3s ease-in-out); */
-  }
-
-  .carousel-control.right {
-    display: none;
-  }
-  .carousel-control.left {
-    display: none;
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    background-image: none !important;
   }
 
   .quotes {
