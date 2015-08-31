@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    scrivito_quote_widget (0.0.15)
+    scrivito_quote_widget (0.0.18)
       bundler
       font-awesome-rails (~> 4.4.0.0)
       scrivito
