@@ -1,3 +1,3 @@
 module ScrivitoQuoteWidget
-  VERSION = "0.0.20"
+  VERSION = "0.0.24"
 end
