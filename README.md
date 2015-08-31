@@ -1,7 +1,7 @@
-# Scrivito Quote Qidget
+# Scrivito Quote Widget
 
 Add some Quotes e.g. Testimonials to your site.
-This gem will add a Quote Widget to your application.
+This gem will add a Quote Widget and a Quote Obj to your application.
 
 ## Installation
 
@@ -17,7 +17,21 @@ Add scripts to your script manifest
 
     //= require scrivito_quote_widget
 
+Add a Filter to your content_browser
 
-## Customization
-
-TODO
+    scrivito.content_browser.filters = {
+      obj_class: {
+        field: '_obj_class',
+        options: {
+          Quote: {
+            title: 'Quote',
+            icon: 'person',
+            query: scrivito.obj_where('_obj_class', 'equals', 'Quote'),
+            enable_create: true,
+            preset: {
+              _obj_class: 'Quote'
+            }
+          }
+        }
+      }
+    }
