@@ -1,10 +1,12 @@
 <div class="scrivito-quote-widget">
   <div class="carousel slide" id="carousel-<%= widget.id %>" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <% (0..widget.quotes.size-1).each do |index| %>
-        <li class="<%= index == 0 ? 'active' : nil %>" data-target="#carousel-<%= widget.id %>" data-slide-to="<%= index %>"></li>
-      <% end %>
-    </ol>
+    <% if widget.quotes.size > 1 %>
+      <ol class="carousel-indicators">
+        <% (0..widget.quotes.size-1).each do |index| %>
+          <li data-target="#carousel<%= widget.id %>" data-slide-to="<%= index %>" <% if index == 0 %>class="active"<% end %>></li>
+        <% end %>
+      </ol>
+    <% end %>
     <div class="carousel-inner carousel-inner-editors" role="listbox">
       <% widget.quotes.each_with_index do |panel,index| %>
         <div class="item <%= index == 0 ? 'active' : nil %>">
@@ -14,13 +16,15 @@
         </div>
       <% end %>
     </div>
-    <div class="carousel-control-wrapper">
-      <a class="carousel-control left" data-slide="prev" href="#carousel-<%= widget.id %>" role="button">
-        <span class="fa fa-chevron-left"></span>
-      </a>
-      <a class="carousel-control right" data-slide="next" href="#carousel-<%= widget.id %>" role="button">
-        <span class="fa fa-chevron-right"></span>
-      </a>
+    <% if widget.quotes.size > 1 %>
+      <div class="carousel-control-wrapper">
+        <a class="carousel-control left" data-slide="prev" href="#carousel-<%= widget.id %>" role="button">
+          <span class="fa fa-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" data-slide="next" href="#carousel-<%= widget.id %>" role="button">
+          <span class="fa fa-chevron-right"></span>
+        </a>
+      <% end %>
     </div>
   </div>
 </div>
