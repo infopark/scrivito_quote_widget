@@ -1,23 +1,29 @@
-<div class="scrivito-quote-widget">
-  <div class="carousel slide" id="carousel-<%= widget.id %>" data-ride="carousel">
-    <div class="carousel-inner carousel-inner-editors" role="listbox">
-      <% widget.quotes.each_with_index do |panel,index| %>
-        <div class="item <%= index == 0 ? 'active' : nil %>">
-          <ul class="carousel">
-            <%= render template: "quote/show", locals: {quote: panel} %>
-          </ul>
-        </div>
-      <% end %>
-    </div>
-    <% if widget.quotes.size > 1 %>
-      <div class="carousel-control-wrapper">
-        <a class="carousel-control left" data-slide="prev" href="#carousel-<%= widget.id %>" role="button">
-          <span class="fa fa-chevron-left"></span>
-        </a>
-        <a class="carousel-control right" data-slide="next" href="#carousel-<%= widget.id %>" role="button">
-          <span class="fa fa-chevron-right"></span>
-        </a>
-      <% end %>
+<% if widget.quotes.present? %>
+  <div class="scrivito-quote-widget">
+    <div class="carousel slide" id="carousel-<%= widget.id %>" data-ride="carousel">
+      <div class="carousel-inner carousel-inner-editors" role="listbox">
+        <% widget.quotes.each_with_index do |panel,index| %>
+          <div class="item <%= index == 0 ? 'active' : nil %>">
+            <ul class="carousel">
+              <%= render template: "quote/show", locals: {quote: panel} %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+      <% if widget.quotes.size > 1 %>
+        <div class="carousel-control-wrapper">
+          <a class="carousel-control left" data-slide="prev" href="#carousel-<%= widget.id %>" role="button">
+            <span class="fa fa-chevron-left"></span>
+          </a>
+          <a class="carousel-control right" data-slide="next" href="#carousel-<%= widget.id %>" role="button">
+            <span class="fa fa-chevron-right"></span>
+          </a>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
+<% else %>
+  <div class="alert alert-info">
+    There are no Quotes selected. Go to details view to add some.
+  </div>
+<% end %>
