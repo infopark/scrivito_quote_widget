@@ -1,3 +1,4 @@
 .bundle/
+.ruby-version
 log/*.log
 pkg/
