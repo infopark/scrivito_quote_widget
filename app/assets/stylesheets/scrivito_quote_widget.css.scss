@@ -76,3 +76,12 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .scrivito-quote-widget {
+    .quotes-bg {
+      &:after {
+        left: 9%;
+      }
+    }
+  }
+}
