@@ -7,7 +7,7 @@ This gem will add a Quote Widget and a Quote Obj to your application.
 
 Add the gem to your gemfile
 
-    gem 'scrivito_quote_widgets'
+    gem 'scrivito_quote_widget'
 
 Add styles to your styles manifest
 
