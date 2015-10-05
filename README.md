@@ -13,10 +13,6 @@ Add styles to your styles manifest
 
     *= require scrivito_quote_widget
 
-Add scripts to your script manifest
-
-    //= require scrivito_quote_widget
-
 Add a Filter to your content_browser
 
     scrivito.content_browser.filters = {
@@ -34,4 +30,4 @@ Add a Filter to your content_browser
           }
         }
       }
-    }
+    };
